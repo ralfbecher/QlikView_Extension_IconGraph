@@ -1,0 +1,13 @@
+.tooltip
+{
+    font-size: 12px;
+    text-anchor: start;
+}
+
+.tooltip_bg
+{
+    fill: #eeeeee;
+    stroke: #999999;
+    stroke-width: 1;
+    opacity: 0.85;
+}

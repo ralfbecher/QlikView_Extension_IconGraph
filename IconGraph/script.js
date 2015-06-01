@@ -1,6 +1,6 @@
 /* Icon Graph
 
-Icon Graph Visualization Extension Object for QlikView based on Vis.js (JavaScript): http://www.visjs.org/
+Icon Graph Visualization Extension Object for QlikView based on Vis.js version 3.x (JavaScript): http://www.visjs.org/
 
 Created by Ralf Becher - ralf.becher@web.de - (c) 2015, irregular.bi, Leipzig, Germany
 

@@ -49,3 +49,9 @@ With this app you can do Qlikview Analysis of the Reload and Distribution tasks 
 
 As an addition to it I created a QlikView application which binary loads QvprAnalysis.qvw and additionally loads some aspects(docs, tasks, users) into an adjacency list table to display it as a graph.
 
+Update:
+-------
+
+Added an new implementation IconGraph2 which implements Vis.js version 4.x with a lot of fixes and improvements (eg. better scaling and fitting, faster rendering). 
+
+Caution: Unfortunately some features of this extensions version (e.g. dragging interaction) doesn't work on QlikView desktop!

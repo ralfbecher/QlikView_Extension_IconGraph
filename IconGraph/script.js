@@ -157,7 +157,7 @@ console.log(data);
 						navigation: true,
 						keyboard: false,
 						groups: iconGroup,
-						stabilizationIterations: 10
+						stabilizationIterations: 100
 					};
 console.log(options);			
 				

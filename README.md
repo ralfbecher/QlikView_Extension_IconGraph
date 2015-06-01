@@ -52,6 +52,6 @@ As an addition to it I created a QlikView application which binary loads QvprAna
 Update:
 -------
 
-Added an new implementation IconGraph2 which implements Vis.js version 4.x with a lot of fixes and improvements (eg. better scaling and fitting, faster rendering). 
+Added a new implementation called IconGraph2 which implements Vis.js version 4.x with a lot of fixes and improvements (e.g. better scaling and fitting, faster rendering). 
 
 Caution: Unfortunately some features of this extensions version (e.g. dragging interaction) doesn't work on QlikView desktop!

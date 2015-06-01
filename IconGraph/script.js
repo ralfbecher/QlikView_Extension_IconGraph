@@ -170,7 +170,15 @@ console.log(options);
 				$( document ).ready(function() {
 						setTimeout(function(){
 							network.freezeSimulation(true)
-			console.log("freezeSimulation");
+							console.log("freezeSimulation");
+							if (!_webview) {
+								$.each($(".vis-button"), function( index, element ) {
+									var url = $(element).css("background-image");
+									var patchUrl = 'url("' + _pathLong + "css/" + url.substr(url.indexOf("img/network/"));
+									//console.log(patchUrl);
+									$(element).css("background-image", patchUrl);
+								});
+							}
 							}, 2000);
 				});
 

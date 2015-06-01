@@ -172,7 +172,8 @@ console.log(options);
 							network.freezeSimulation(true)
 							console.log("freezeSimulation");
 							if (!_webview) {
-								$.each($(".vis-button"), function( index, element ) {
+								$.each($(".network-navigation"), function( index, element ) {  // vis.js 3.x
+								//$.each($(".vis-button"), function( index, element ) { // vis.js 4.x
 									var url = $(element).css("background-image");
 									var patchUrl = 'url("' + _pathLong + "css/" + url.substr(url.indexOf("img/network/"));
 									//console.log(patchUrl);

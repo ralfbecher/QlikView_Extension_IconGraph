@@ -1,6 +1,6 @@
 /* Icon Graph
 
-Icon Graph Visualization Extension Object for QlikView based on Vis.js version 4.x (JavaScript): http://www.visjs.org/
+Icon Graph Visualization Extension Object for QlikView based on Vis.js (JavaScript): http://www.visjs.org/
 
 Created by Ralf Becher - ralf.becher@web.de - (c) 2015, irregular.bi, Leipzig, Germany
 
@@ -133,8 +133,8 @@ if(!window.console){ window.console = {log: function(){} }; }
 						nodes: nodesObj,
 						edges: edgesObj
 					};
-console.log(data);			
-console.log({minScale:minScale,maxScale:maxScale})
+				console.log(data);			
+				
 				var options = {
 						height: _this.GetHeight()+"px",
 						interaction: {
@@ -159,7 +159,7 @@ console.log({minScale:minScale,maxScale:maxScale})
 										scale = 1 / (max - min);
 										ret = Math.max(0,(value - min)*scale);
 									}
-									console.log({min:min,max:max,total:total,value:value,scale:scale,ret:ret});
+									//console.log({min:min,max:max,total:total,value:value,scale:scale,ret:ret});
 									return ret;
 								},
 							min: minScale, 
@@ -233,7 +233,7 @@ console.log({minScale:minScale,maxScale:maxScale})
 function pushNode(_name, _label, _nodeSize, _tooltip, _nodes, _nodesObj, _nodeTypes, _nodeTypesLkp, _iconGroup, _imgUrl, _iconPalette, _colorPalette) {
 	var _id = $.inArray(_name, _nodes),
 		_pos = _name.indexOf(":"),
-		_typeLabel = "",
+		_typeLabel = "Node",
 		_typeIdx = -1;
 	if (_pos > 0) _typeLabel = _name.substr(0, _pos);
 	if (_id == -1) {
@@ -249,7 +249,16 @@ function pushNode(_name, _label, _nodeSize, _tooltip, _nodes, _nodesObj, _nodeTy
 						image: _imgUrl + _iconPalette[_typeIdx % _iconPalette.length],
 						brokenImage: _imgUrl + "circle33.png",
 						font: {
-							color: _colorPalette[_typeIdx % _colorPalette.length]
+							color: _colorPalette.length > 0 ? _colorPalette[_typeIdx % _colorPalette.length] : '#dd0000'
+						}
+					};
+			} else if (_typeLabel == "Node") {
+				// create default icon group
+				_iconGroup[_typeLabel] = {
+						shape: 'image',
+						image: _imgUrl + "circle33.png",
+						font: {
+							color: _colorPalette.length > 0 ? _colorPalette[0] : '#dd0000'
 						}
 					};
 			}
@@ -268,7 +277,7 @@ function pushNode(_name, _label, _nodeSize, _tooltip, _nodes, _nodesObj, _nodeTy
 			title: _tooltip,
 			group: _typeLabel
 		}
-//console.log(n);
+console.log(n);
 		_nodesObj.push(n);
 	} else {
 		_id ++;

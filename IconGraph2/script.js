@@ -170,13 +170,6 @@ if(!window.console){ window.console = {log: function(){} }; }
 				var container = document.getElementById(_id);
 				var network = new vis.Network(container, data, options);
 
-				// patch css path for server
-				if (!_webview) {
-					$.each($(".vis-button"), function( index, element ) {
-						element.css("background-image", _pathLong + "css/" + element.css("background-image"));
-					});
-				}
-				
 				var menu = $('<menu />').attr({ id: _menuId}).appendTo(wrapper);
 				menu.append('<button class="btn" id="'+_buttonId+'" style="position:absolute;top:1px;left:1px;font: bold 12px Arial;outline:none;color:#325078">force</button>');
 				

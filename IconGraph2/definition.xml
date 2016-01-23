@@ -6,11 +6,11 @@
                  PageHeight="500"
                  PageWidth="12"
 >
-  <Dimension Label="Parent Node" Initial="Parent" TargetName="Dimension Name"  Width="600px" />
-  <Dimension Label="Child Node" Initial="Child" TargetName="Dimension Name"  Width="600px" />
-  <Dimension Label="Edge" Initial="" TargetName="Dimension Name" Width="600px" />
-  <Measurement Label="Parent Label" Initial="Parent_Label"/>
-  <Measurement Label="Child Label" Initial="Child_Label"/>
+  <Dimension Label="Node1" Initial="Parent" TargetName="Dimension Node1" />
+  <Dimension Label="Node2" Initial="Child" TargetName="Dimension Node2" />
+  <Dimension Label="Edge" Initial="" TargetName="Dimension Edge" />
+  <Measurement Label="Parent Label" Initial=""/>
+  <Measurement Label="Child Label" Initial=""/>
   <Measurement Label="Edge Label" Initial=""/>
   <Measurement Label="Parent Size" Initial=""/>
   <Measurement Label="Child Size" Initial=""/>
@@ -21,15 +21,15 @@
   <Text Label="Node Type Prefixes" Type="text" Expression="" />
   <Text Label="Node Type Colors" Type="text" Expression="#4477aa,#117733,#ddcc77,#cc6677,#7db8da,#b6d7ea,#b0afae,#7b7a78,#545352,#46c646,#f93f17,#ffcf02,#276e27" />
   <Text Label="Node Type Images" Type="text" Expression="" />
-  <Text Label="Graph is directed" Type="checkbox" Expression="1" />
+  <Text Label="Graph is directed" Type="checkbox" Expression="" />
   <Text Label="Edge Style" Type="text" Expression="arrow" />
   <Text Label="Edge Label Color" Type="text" Expression="darkgray" />
   <Text Label="Edge Font Size" Type="text" Expression="9" />
   <Initiate Name="Chart.Title" value="Icon Graph" /> 
   <Initiate Name="Caption.Text" Value="Icon Graph"/>
-  <Initiate Name="Chart.Dimension.0.0.Definition" Value="Node1" />
-  <Initiate Name="Chart.Dimension.1.0.Definition" Value="Node2" />
-  <Initiate Name="Chart.Dimension.2.0.Definition" Value="'Edge'" />
+  <Initiate Name="Chart.Dimension.0.Field" Value="Node1" />
+  <Initiate Name="Chart.Dimension.1.Field" Value="Node2" />
+  <Initiate Name="Chart.Dimension.2.Field" Value="Edge" />
   <Initiate Name="Chart.Expression.0.0.Definition" Value="'Node1 Label'" />
   <Initiate Name="Chart.Expression.1.0.Definition" Value="'Node2 Label'" />
   <Initiate Name="Chart.Expression.2.0.Definition" Value="'Edge Label'" />
@@ -39,5 +39,6 @@
   <Initiate Name="Chart.Expression.6.0.Definition" Value="'Node1 Tooltip'" />
   <Initiate Name="Chart.Expression.7.0.Definition" Value="'Node2 Tooltip'" />
   <Initiate Name="Chart.Expression.8.0.Definition" Value="'Edge Tooltip'" />
+  <Initiate Name="Chart.Text.3.Content" Value="1" />
   <Initiate Name="Chart.BgColor.ColorHex" value="#FFF" /> 
 </ExtensionObject>
